@@ -77,7 +77,9 @@ const Navigation = () => {
           >
              <img 
                src={LOGO_SRC} 
-               alt="GraxxSocials Logo" 
+               alt="GraxxSocials Logo"
+               width="48"
+               height="48"
                className="w-full h-full object-contain rounded-full shadow-lg" 
              />
           </motion.div>
@@ -164,7 +166,11 @@ const Footer = () => (
           <div className="w-10 h-10">
              <img 
                src={LOGO_SRC} 
-               alt="GraxxSocials Logo" 
+               alt="GraxxSocials Logo"
+               width="40"
+               height="40"
+               loading="lazy"
+               decoding="async"
                className="w-full h-full object-contain rounded-full" 
              />
           </div>

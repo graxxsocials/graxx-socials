@@ -1,5 +1,6 @@
 import React from 'react';
-import { motion, useMotionValue, useSpring, useTransform, useMotionTemplate } from 'framer-motion';
+// FIX: Added Variants to the import to correctly type motion variants.
+import { motion, useMotionValue, useSpring, useTransform, useMotionTemplate, Variants } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight, Play, Star, Sparkles, TrendingUp } from 'lucide-react';
 import { Button, NeonCard, SectionHeading } from '../components/ui';
@@ -71,7 +72,8 @@ const Hero = () => {
     }
   };
 
-  const itemVariants = {
+  // FIX: Explicitly typed `itemVariants` with `Variants` to fix type inference issue with the `ease` property.
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
       opacity: 1, 
